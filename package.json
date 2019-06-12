@@ -1,0 +1,25 @@
+{
+  "name": "bankaccount-nodejs-app",
+  "version": "1.0.0",
+  "description": "This is a simple server. CRUD of user and bank agency. Take a look at my [GitHub](https://github.com/rodrigoncalves).",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "./node_modules/nodemon/bin/nodemon.js src/index.js"
+  },
+  "author": "Rodrigo Gonçalves",
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "boom": "^7.3.0",
+    "fastify": "^2.4.1",
+    "fastify-swagger": "^2.4.0",
+    "mongoose": "^5.5.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
