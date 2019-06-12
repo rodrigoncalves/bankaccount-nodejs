@@ -8,7 +8,7 @@ exports.options = {
       version: '1.0.0',
       contact: { email: 'rodrigosg2000@gmail.com' },
     },
-    host: 'localhost:3000',
+    host: 'localhost:8081',
     schemes: ['http'],
     consumes: ['application/json'],
     produces: ['application/json'],
