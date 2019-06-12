@@ -7,7 +7,7 @@ const userSchema = new Schema({
   email: String,
   cep: String,
   account: String,
-  agency: [{ type: Schema.Types.ObjectId, ref: 'Agency' }]
+  agencyId: { type: Schema.Types.ObjectId, ref: 'Agency' }
 })
 
 module.exports = mongoose.model('User', userSchema)

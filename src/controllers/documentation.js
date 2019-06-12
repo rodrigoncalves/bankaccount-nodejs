@@ -48,15 +48,7 @@ const userBody = {
     email: { type: 'string' },
     cep: { type: 'string' },
     account: { type: 'string' },
-    agency: {
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        bank: { type: 'string' },
-        address: { type: 'string' },
-        ag: { type: 'string' },
-      }
-    }
+    agencyId: { type: 'string' },
   },
   required: ['name']
 }
@@ -65,20 +57,12 @@ const userResponse = {
   200: {
     type: 'object',
     properties: {
-      _id: { type: 'string' },
+      id: { type: 'string' },
       name: { type: 'string' },
       email: { type: 'string' },
       cep: { type: 'string' },
       account: { type: 'string' },
-      agency: {
-        type: 'object',
-        properties: {
-          _id: { type: 'string' },
-          bank: { type: 'string' },
-          address: { type: 'string' },
-          ag: { type: 'string' },
-        }
-      }
+      agencyId: { type: 'string' }
     },
   }
 }
@@ -93,15 +77,7 @@ const userListResponse = {
         email: { type: 'string' },
         cep: { type: 'string' },
         account: { type: 'string' },
-        agency: {
-          type: 'object',
-          properties: {
-            _id: { type: 'string' },
-            bank: { type: 'string' },
-            address: { type: 'string' },
-            ag: { type: 'string' },
-          }
-        }
+        agencyId: { type: 'string' }
       }
     }
   }

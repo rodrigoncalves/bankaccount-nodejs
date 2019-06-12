@@ -14,33 +14,34 @@ exports.getUsers = async (req, reply) => {
   }
 }
 
-// Get single agency by ID
+// Get single user by ID
 exports.getSingleUser = async (req, reply) => {
   try {
     const id = req.params.id
-    const agency = await User.findById(id)
-    return agency
+    const user = await User.findById(id)
+    return user
   } catch (err) {
     throw boom.boomify(err)
   }
 }
 
-// Add a new agency
+// Add a new user
 exports.addUser = async (req, reply) => {
   try {
-    const agency = new User(req.body)
-    return agency.save()
+    const body = req.body;
+    const user = new User(body)
+    return user.save()
   } catch (err) {
     throw boom.boomify(err)
   }
 }
 
-// Update an existing agency
+// Update an existing user
 exports.updateUser = async (req, reply) => {
   try {
     const id = req.params.id
-    const agency = req.body
-    const { ...updateData } = agency
+    const user = req.body
+    const { ...updateData } = user
     const update = await User.findByIdAndUpdate(id, updateData, { new: true })
     return update
   } catch (err) {
@@ -48,12 +49,12 @@ exports.updateUser = async (req, reply) => {
   }
 }
 
-// Delete a agency
+// Delete a user
 exports.deleteUser = async (req, reply) => {
   try {
     const id = req.params.id
-    const agency = await User.findByIdAndRemove(id)
-    return agency
+    const user = await User.findByIdAndRemove(id)
+    return user
   } catch (err) {
     throw boom.boomify(err)
   }
