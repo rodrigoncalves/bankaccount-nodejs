@@ -12,7 +12,7 @@ fastify.register(require('fastify-swagger'), swagger.options)
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(8081)
+    await fastify.listen(8081, '0.0.0.0')
     fastify.swagger()
     fastify.log.info(`listening on ${fastify.server.address().port}`)
   } catch (err) {
@@ -25,7 +25,7 @@ const start = async () => {
 const mongoose = require('mongoose')
 
 // Connect to DB
-mongoose.connect('mongodb://localhost/bankaccount', { useNewUrlParser: true })
+mongoose.connect('mongodb://mongo/bankaccount', { useNewUrlParser: true })
   .then(() => console.log('MongoDB connected…'))
   .catch(err => console.log(err))
 
