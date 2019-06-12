@@ -1,0 +1,17 @@
+version: "2"
+services:
+  app:
+    container_name: bankaccount-nodejs
+    restart: always
+    build: .
+    ports:
+      - "8081:8081"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - /data/db:/data/db
+    ports:
+      - "27017:27017"

@@ -25,7 +25,7 @@ const start = async () => {
 const mongoose = require('mongoose')
 
 // Connect to DB
-mongoose.connect('mongodb://localhost/mycargarage', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/bankaccount', { useNewUrlParser: true })
   .then(() => console.log('MongoDB connected…'))
   .catch(err => console.log(err))
 
